@@ -1,6 +1,9 @@
 <html>
 <head>
     <link href='https://fonts.googleapis.com/css?family=Antonio' rel='stylesheet'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e7a95938a9.js" crossorigin="anonymous"></script>
     <title>metaversius</title>
     <style>
@@ -12,11 +15,8 @@
 
         #first{
             margin-top: 5%;
-           
-            
-            
-
         }
+		
         a {
             color : white;
         }
@@ -30,19 +30,124 @@
 <body>
     <div id="first" align = "center">
     <img src="./images/logo.png" alt="logo" width="400" height="400">
-    <p style="
-    font: 21pt 'Antonio';"
-    
-    >Connect me!</p>
+	<h1 style="font: 21pt 'Antonio';" >Personal Notes</h1>
+	<a href = "#SQLStatementFundamentals" style="font: 21pt 'Antonio';">SQL Statement Fundamentals</a>
+	<br><br>
+    <p style="font: 21pt 'Antonio';">Connect me!</p>
     <a href="https://www.twitter.com/metaversius"><i class="fab fa-twitter"></i></a>
     <br><br>
     <a href="https://yildirimomer.medium.com/"><i class="fab fa-medium"></i></a>
     <br><br>
-    <a href="https://www.linkedin.com/in/%C3%B6mer-y%C4%B1ld%C4%B1r%C4%B1m-99397a233/"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.linkedin.com/in/%C3%B6mer-y%C4%B1ld%C4%B1r%C4%B1m-99397a233/"><i class="fab fa-linkedin"></i></a>	
     <br><br><br><br>
     <a class="twitter-timeline" href="https://twitter.com/metaversius?ref_src=twsrc%5Etfw" width="600" height="500"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     
     </div>
+	<br>
+	<div id="SQLStatementFundamentals" align= 'center' style = "padding: '0 100px 0 100px'; border-style: solid; border-width: thick;
+	border-width: 20px;">
+	<br><br>
+	<h1 style="font: 20pt 'Antonio';">SQL Statement Fundamentals</h1>
+	<pre style="font-family: 'Antonio', sans-serif;">
+	**SELECT**
+	SELECT column_name FROM table_name
+	SELECT c1,c2 FROM table_1
+	SELECT * FROM table_1
+	İstenilen sırada sonuc uretilir.
+
+	**SELECT DISTINCT**
+	SELECT DISTINCT column FROM table
+	SELECT DISTINCT(column) FROM tabe
+	*** unique first element in the column
+
+	**COUNT**
+	SELECT COUNT(name) FROM table;
+	returns the number of rows in the table.
+	SELECT count(choice) FROM table;
+	SELECT COUNT(*) FROM table;
+	all returns same thing
+	SELECT COUNT(DISTINCT name) FROM table;
+	SELECT COUNT(DISTINCT(name)) FROM table;
+
+	**SELECT WHERE**
+	SELECT column1, column2
+	FROM table
+	WHERE conditions;
+	Immediately after the FROM !
+	=
+	>
+	<
+	>=
+	<=
+	<> veya !=
+	AND
+	OR
+	NOT
+	Use single quote  '' for strings.
+	* asteriks tüm columnları seçer.
+	Rowları saymak icin COLUMN adını COUNT parantezine almalıyız.
+
+	**ORDER BY**
+	SELECT col1,col2
+	FROM table
+	ORDER BY col1 ASC / DESC;
+	ORDER BY is at the end of query.
+	ASC as default.
+	SELECT * FROM customer
+	ORDER BY store_id DESC, first name ASC;
+	filtrelemelerden sonra yazilir.
+
+	**LIMIT**
+	limit the num of rows returned for query.
+	show top few rows.
+	LIMIT EN SONDA YER ALIR.
+	LIMIT 5;
+	SELECT * FROM payment
+	LIMIT 1;
+	veri tiplerini kontrol etmemize yarar.
+	limit kullanırken dikkatli ol en kısalarını bulamayabilirsin.
+
+	**BETWEEN**
+	value BETWEEN low AND high
+	same with:
+	value >= low and value <= high
+	NOT BETWEEN is also possible.
+	and its same with:
+	value < low OR value > high
+	BETWEEN can also be used with dates.
+	'yyyy-mm-dd' format
+	normally between is inclusive.
+	datetime starts at 0:00 !
+	WHERE amount BETWEEN 8 AND 9;
+	sondaki güne girer girmez 0:00'da biter !
+
+	**IN**
+	WHERE value IN (option1, option2, ... , option_n)
+	NOT IN is also possible.
+
+	**LIKE AND ILIKE**
+	pattern matching
+	use of wildcard characters
+	% : matches any seq of chars
+	_ : any single char
+	WHERE name LIKE 'A%': ALL NAMES 
+	THAT BEGIN WITH 'A'
+	WHERE name LIKE '%a' : ALL NAMES
+	THAT END WITH AN 'a'
+	LIKE: CASE-SENSTIVIE
+	ILIKE: CASE-INSENSITIVE
+	Underscore allows us to replace 
+	just a single character
+	WHERE title LIKE 'Mission Impossible _'
+	Multiple underscore is okay!
+	WHERE value LIKE 'Version#_ _'
+	We can combine:
+	WHERE name LIKE '_her%'
+	Devamı: functions-matching.html
+	% yerine gelecek ifade bosluk da olabilir.
+	Ayrıca LIKE ve ILIKE basina NOT getirilebilir.
+	</pre>
+	</div>
     
 </body>
 
